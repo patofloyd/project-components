@@ -1,7 +1,7 @@
 {
-  "name": "spc_testfile",
-  "version": "2.1.9",
-  "description": "This is the first testcomponent for a component library to be used with Spacecraft.",
+  "name": "spc_inline_menu",
+  "version": "0.0.0",
+  "description": "This is one of a few testcomponents developed to fit Spacecraft.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,14 +10,14 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pedric/spacecomponent_testfile.git"
+    "url": "git@github.com:pedric/project-components.git"
   },
   "keywords": [
     "Spacecraft",
     "componentlibrary"
   ],
   "bugs": {
-    "url": "https://github.com/pedric/spacecomponent_testfile/issues"
+    "url": "https://github.com/pedric/project-components/issues"
   },
-  "homepage": "https://github.com/pedric/spacecomponent_testfile#readme"
+  "homepage": "https://github.com/pedric/project-components#readme"
 }

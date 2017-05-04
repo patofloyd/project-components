@@ -1,0 +1,16 @@
+<div id="spc_hero_article" data-module="spc_hero_article" data-spc_hero_article="spc_hero_article JS-module loaded!">
+		
+	{% for item in excerpts.items %}
+		<article style="background-image:url({{ item.image }});">
+			<div>
+				<div>
+					<h2>{{ item.heading }}</h2>
+					<!--<p>{{ item.ingress }}</p>-->
+					<hr />
+					<h5>{{ item.author }} {{ item.date }}</h5>
+				</div>
+			</div>
+		</article>
+	{% endfor %}
+
+</div>

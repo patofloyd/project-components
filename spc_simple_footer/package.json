@@ -1,0 +1,23 @@
+{
+  "name": "spc_testfile",
+  "version": "2.1.9",
+  "description": "This is the first testcomponent for a component library to be used with Spacecraft.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fredrik Larsson",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedric/spacecomponent_testfile.git"
+  },
+  "keywords": [
+    "Spacecraft",
+    "componentlibrary"
+  ],
+  "bugs": {
+    "url": "https://github.com/pedric/spacecomponent_testfile/issues"
+  },
+  "homepage": "https://github.com/pedric/spacecomponent_testfile#readme"
+}

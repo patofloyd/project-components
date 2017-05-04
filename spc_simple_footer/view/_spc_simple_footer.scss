@@ -1,0 +1,28 @@
+$spc_simple_footer_color: #cecece;
+
+.spc_simple_footer {
+
+	float: left;
+	width: 100%;
+
+	hr {
+		border: 0; 
+	  height: 1px;
+	  width: 100%;
+	  background: $spc_simple_footer_color;
+	} 
+
+	footer {
+
+		p {
+			margin: 44px auto 55px;
+		}
+
+		span, p, a {
+			color: $spc_simple_footer_color;
+			font-size: 11px;
+			text-align: center;
+			font-weight: lighter;
+		}
+	}
+}

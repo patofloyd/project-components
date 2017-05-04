@@ -1,10 +1,11 @@
-export default class Spc_fullwidth_heading {
+export default class Spc_article {
     constructor(element) {
 
         let that = this
 
         this.element = element
-        this.heading = element.querySelector('a')
+        this.heading = element.querySelector('h1')
+        this.heading.style.display = 'inline-block'
 
         this.setHeadingSize()
         window.addEventListener('resize', function() {
@@ -15,11 +16,11 @@ export default class Spc_fullwidth_heading {
     setHeadingSize() {
 
         let fontSize = parseFloat(window.getComputedStyle(this.heading, null).getPropertyValue('font-size'))
-        let safeMargin = 27
-    	
+        let safeMargin = 20
+        
         // Element width, content width and fontsize
         let x = this.heading.offsetWidth
-        let y = this.element.offsetWidth - safeMargin
+        let y = this.heading.parentElement.offsetWidth - safeMargin
         let z = fontSize
 
         // If content is smaller than parentelement

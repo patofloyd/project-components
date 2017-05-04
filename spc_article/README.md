@@ -1,4 +1,4 @@
-# spc_testfile
+# spc_article
 *- A test-/template component for Spacecraft Starterkit*
 
 This suggests how components are to be structured and given name to be compatible with the [Spacecraft Starterkit](https://github.com/pedric/spacecraft-starterkit) and to meet good standard.

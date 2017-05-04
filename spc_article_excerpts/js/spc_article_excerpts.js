@@ -1,59 +1,35 @@
-export default class Spc_testfile {
+export default class Spc_article_excerpts {
     constructor(element) {
 
-    // Log load-verification for module
-    let verification = element.getAttribute('data-spc_testfile');
-    console.log(verification)
+        let that = this
+        this.element = element
 
-    let headingSize = function() {
+        this.setBoxHeight()
+        window.addEventListener('resize', function() {
+            that.setBoxHeight()
+        })
 
-        // Set basic style to heading
-        let h1 = element.querySelector('h1')
-        h1.style.display = 'inline-block'
-        h1.style.fontSize = 48 + 'px'
-
-        // Get width of the content
-        // (Width for heading is supposed to line with
-        // the content width no matter what screensize)
-        // Safemargin prevents unwanted linebreaking in heading
-        let responsiveBreakingPoint = 800
-        let maxWidth = 530
-        let safeMargin = 20
-
-    	let screenWidth = window.innerWidth
-        if(screenWidth > responsiveBreakingPoint) { 
-            screenWidth = (( screenWidth / 10 ) * 5) - safeMargin
-            if (screenWidth >= maxWidth) { screenWidth = maxWidth - safeMargin } 
-        } else {
-            screenWidth = ((screenWidth / 10) * 8) - safeMargin
+        for (var i = 0; i < element.children.length; i++) {
+            let thisEl = element.children[i].querySelectorAll('svg')
+            element.children[i].addEventListener('mousemove', function(e) {
+                that.moveArrow(e, thisEl)
+            })
         }
 
-        // Element-, content width and fontsize to int
-        let x = h1.offsetWidth
-        let y = screenWidth
-        let z = parseInt(h1.style.fontSize.replace('px', ''))
+    }
 
-        // If heading is smaller than element
-        if(x < y) {
+    setBoxHeight() {
             
-            for (var i = x; i < y; z++) {
-                h1.style.fontSize = z + 'px'
-                i = h1.offsetWidth
-            }
+        let boxWidth = this.element.firstElementChild.firstElementChild.offsetWidth
 
-        // If content is smaller than element
-        } else {
-
-            for (var i = x; i > y; z--) {
-                h1.style.fontSize = z + 'px'
-                i = h1.offsetWidth
-            }
+        for (var i = 0; i < this.element.children.length; i++) {
+            this.element.children[i].firstElementChild.style.height = boxWidth + 'px'
         }
     }
 
-    /* Init */
-    headingSize()
-    window.addEventListener('resize', headingSize)
-
+    moveArrow(e, thisEl) {
+        
+        let node = 'rotate(' + (e.clientY - e.clientX) / 2 + 'deg)'
+        thisEl[0].style.transform = node
     }
 }

@@ -1,9 +1,42 @@
-# spc_testfile
+
+*- Button with rounded corners and some hover-effects*
+
+*- Designed as a Spacecraft Starterkit compatible component*
+
+[Here is a styleguide for this component and the rest in it's theme](https://spc-component-library.herokuapp.com/)
+
+## About
+No config.json needed, set button-content in the `data-spc_more_button` attribute like this: `data-spc_more_button="value"` in spc_more_button.twig.
+
+Change the color variables in scss-file to customise, by default it´s #fff and #000 set as "bright and dark". Button set to fullwidth at `@media screen and (max-width:800px)`.
+
+## Install
+Clone/download [Spacecraft Starterkit](https://github.com/pedric/spacecraft-starterkit) and run:
+
+`npm install`
+
+`npm install --save <component-name>`
+// To get this actual component downloaded.
+
+`gulp import --component <component-name>`
+// To get the files into your project.
+
+`gulp`
+// To start up Spacecraft.
+
+The last step is to import the css, in..
+
+`./src/scss/components/_components.main.scss`
+
+..add..
+
+`@import "views/<component-name>/<component-name>";`
+
 *- A test-/template component for Spacecraft Starterkit*
 
 This suggests how components are to be structured and given name to be compatible with the [Spacecraft Starterkit](https://github.com/pedric/spacecraft-starterkit) and to meet good standard.
 
-[SPC_TESTFILE AT GITHUB](https://github.com/pedric/test-component)
+[PROJECT COMPONENTS AT GITHUB](https://github.com/pedric/project-components)
 
 ## Root
 Export the path with `module.exports = __dirname;` in your index.js file so that the [import tasks](https://github.com/pedric/spacecraft-starterkit#import-components) in Spacecraft can reach your files.

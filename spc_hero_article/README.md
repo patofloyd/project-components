@@ -1,9 +1,41 @@
-# spc_testfile
+
+*- Full width single block for articlepreview*
+
+*- Designed as a Spacecraft Starterkit compatible component*
+
+[Here is a styleguide for this component and the rest in it's theme](https://spc-component-library.herokuapp.com/)
+
+## About
+This can for example be used to haedline an article together with the article excerpts component since it has the same design. The article excerpts shows the image, heading, author and tags for each article in a responsive grid while this shows one fullwidth preview att all screensizes and also shows the ingress for the article.
+
+
+## Install
+Clone/download [Spacecraft Starterkit](https://github.com/pedric/spacecraft-starterkit) and run:
+
+`npm install`
+
+`npm install --save <component-name>`
+// To get this actual component downloaded.
+
+`gulp import --component <component-name>`
+// To get the files into your project.
+
+`gulp`
+// To start up Spacecraft.
+
+The last step is to import the css, in..
+
+`./src/scss/components/_components.main.scss`
+
+..add..
+
+`@import "views/<component-name>/<component-name>";`
+
 *- A test-/template component for Spacecraft Starterkit*
 
 This suggests how components are to be structured and given name to be compatible with the [Spacecraft Starterkit](https://github.com/pedric/spacecraft-starterkit) and to meet good standard.
 
-[SPC_TESTFILE AT GITHUB](https://github.com/pedric/test-component)
+[PROJECT COMPONENTS AT GITHUB](https://github.com/pedric/project-components)
 
 ## Root
 Export the path with `module.exports = __dirname;` in your index.js file so that the [import tasks](https://github.com/pedric/spacecraft-starterkit#import-components) in Spacecraft can reach your files.

@@ -1,6 +1,6 @@
 {
   "name": "spc_fullwidth_heading",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This is one of a few testcomponents developed to fit Spacecraft.",
   "main": "index.js",
   "scripts": {

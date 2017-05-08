@@ -11,32 +11,28 @@ In spc_fullwidth_heading.config.json you control the text-content and link-targe
 Change the font-family and color variables in scss-file to customise, by default it´s `'Helvetica', sans-serif` and `#000`.
 
 ## Install
-Clone/download [Spacecraft Starterkit](https://github.com/pedric/spacecraft-starterkit) and run:
+
+### Spacecraft Starterkit
+If you have not yet installed [Spacecraft Starterkit](https://github.com/pedric/spacecraft-starterkit) , do so by running:
+
+`git clone git@github.com:pedric/spacecraft-starterkit.git`
+
+`cd spacecraft-starterkit`
 
 `npm install`
 
-`npm install --save <component-name>`
-// To get this actual component downloaded.
+### spc_article
+If you have already installed [Spacecraft Starterkit](https://github.com/pedric/spacecraft-starterkit), run:
 
-`gulp import --component <component-name>`
-// To get the files into your project.
+`npm install --save spc_fullwidth_heading && gulp import --component spc_fullwidth_heading`
 
-`gulp`
-// To start up Spacecraft.
+And don't forget to import the css by adding:
 
-The last step is to import the css, in..
+`@import "views/spc_fullwidth_heading/spc_fullwidth_heading";`
+
+in
 
 `./src/scss/components/_components.main.scss`
-
-..add..
-
-`@import "views/<component-name>/<component-name>";`
-
-*- A test-/template component for Spacecraft Starterkit*
-
-This suggests how components are to be structured and given name to be compatible with the [Spacecraft Starterkit](https://github.com/pedric/spacecraft-starterkit) and to meet good standard.
-
-[PROJECT COMPONENTS AT GITHUB](https://github.com/pedric/project-components)
 
 ## Root
 Export the path with `module.exports = __dirname;` in your index.js file so that the [import tasks](https://github.com/pedric/spacecraft-starterkit#import-components) in Spacecraft can reach your files.

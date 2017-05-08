@@ -22,9 +22,7 @@ If you have not yet installed [Spacecraft Starterkit](https://github.com/pedric/
 ### spc_article
 If you have already installed [Spacecraft Starterkit](https://github.com/pedric/spacecraft-starterkit), run:
 
-`npm install --save spc_article`
-
-`gulp import --component spc_article`
+`npm install --save spc_article && gulp import --component spc_article`
 
 And don't forget to import the css by adding:
 

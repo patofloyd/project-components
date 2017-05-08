@@ -9,32 +9,28 @@
 Add the amount of menu-items that´s in your custom menu to spc\_inline_menu.config.json and it will divided and lined up inline forming a fullwidth menu. Add submenu items under your menu items and they´ll dropdown on hover, yet there is no support for items wrapped under sub-menu items. On smaller devices the menu will toggle from the menu button and expand the whole menu scrollable.
 
 ## Install
-Clone/download [Spacecraft Starterkit](https://github.com/pedric/spacecraft-starterkit) and run:
+
+### Spacecraft Starterkit
+If you have not yet installed [Spacecraft Starterkit](https://github.com/pedric/spacecraft-starterkit) , do so by running:
+
+`git clone git@github.com:pedric/spacecraft-starterkit.git`
+
+`cd spacecraft-starterkit`
 
 `npm install`
 
-`npm install --save <component-name>`
-// To get this actual component downloaded.
+### spc_article
+If you have already installed [Spacecraft Starterkit](https://github.com/pedric/spacecraft-starterkit), run:
 
-`gulp import --component <component-name>`
-// To get the files into your project.
+`npm install --save spc_inline_menu && gulp import --component spc_inline_menu`
 
-`gulp`
-// To start up Spacecraft.
+And don't forget to import the css by adding:
 
-The last step is to import the css, in..
+`@import "views/spc_inline_menu/spc_inline_menu";`
+
+in
 
 `./src/scss/components/_components.main.scss`
-
-..add..
-
-`@import "views/<component-name>/<component-name>";`
-
-*- A test-/template component for Spacecraft Starterkit*
-
-This suggests how components are to be structured and given name to be compatible with the [Spacecraft Starterkit](https://github.com/pedric/spacecraft-starterkit) and to meet good standard.
-
-[PROJECT COMPONENTS AT GITHUB](https://github.com/pedric/project-components)
 
 ## Root
 Export the path with `module.exports = __dirname;` in your index.js file so that the [import tasks](https://github.com/pedric/spacecraft-starterkit#import-components) in Spacecraft can reach your files.

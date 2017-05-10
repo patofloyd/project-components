@@ -1,8 +1,9 @@
 {
-	"status": "wip",
+	"status": "ready",
 	"context": {
-		"heading": "companyname",
-		"href": "#"
+		"spc_fullwidth_heading": {
+			"heading": "placeholder",
+			"href": "#"
 		}
 	}
 }
